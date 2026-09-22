@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清澄有馀幽素香 - 古典文人雅致生活与香道文化指南</title>
+    <meta name="description" content="探索“清澄有馀幽素香”的东方美学意境。本站提供古典香道文化解读、文人雅士生活指南、香器鉴赏以及如何营造清幽素雅生活空间的实用建议。">
+    <meta name="keywords" content="清澄有馀幽素香, 香道文化, 古典美学, 文人生活, 香器鉴赏, 茶香文化, 禅意空间">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #5D5C61;
+            --secondary-color: #8C8C8C;
+            --accent-color: #D4AF37;
+            --bg-color: #FDFBF7;
+            --card-bg: #FFFFFF;
+            --text-main: #2C2C2C;
+            --text-light: #666666;
+            --spacing-unit: 1rem;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --font-serif: "Songti SC", "Noto Serif SC", "SimSun", serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+            font-size: 1.1rem;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #4a494d;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://picsum.photos/seed/clean/1920/1080');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--border-radius);
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            color: #f0f0f0;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: var(--accent-color);
+            color: #fff;
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .hero .btn:hover {
+            background-color: #bfa030;
+            transform: translateY(-2px);
+        }
+
+        /* Philosophy Section */
+        .philosophy {
+            background-color: #fff;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .philosophy-card {
+            padding: 2rem;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            transition: box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .philosophy-card:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .philosophy-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .philosophy-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        /* Featured Works / Guide */
+        .featured {
+            background-color: var(--bg-color);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .guide-item {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .guide-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .guide-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .guide-content {
+            padding: 1.5rem;
+        }
+
+        .guide-tag {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .guide-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .guide-link {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .guide-link::after {
+            content: '→';
+            margin-left: 5px;
+            transition: margin-left 0.3s;
+        }
+
+        .guide-link:hover::after {
+            margin-left: 10px;
+        }
+
+        /* Interactive Section: Quiz */
+        .quiz-section {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+        }
+
+        .quiz-section h2 {
+            color: #fff;
+        }
+        
+        .quiz-section h2::after {
+            background-color: #fff;
+        }
+
+        .quiz-section p {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .quiz-box {
+            background: rgba(255,255,255,0.1);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .quiz-btn {
+            background: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 2rem;
+            font-family: var(--font-serif);
+        }
+
+        .quiz-btn:hover {
+            background-color: #bfa030;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #fff;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 1rem;
+            color: var(--text-light);
+            display: none;
+            padding-left: 1rem;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2C2C2C;
+            color: #ccc;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            
+            .nav-container { flex-direction: column; gap: 1rem; }
+            nav ul { gap: 1rem; font-size: 0.9rem; }
+            
+            .guide-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <span>●</span> 清澄有馀幽素香
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#philosophy">文化理念</a></li>
+                    <li><a href="#guide">生活指南</a></li>
+                    <li><a href="#quiz">意境测试</a></li>
+                </ul>
+            </nav>
+            <a href="#guide" class="cta-button">探索雅趣</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>清澄有馀幽素香</h1>
+                <p>于喧嚣尘世中，寻一方清静之地。探索东方香道美学，重塑文人雅致生活方式。</p>
+                <button class="btn" onclick="document.getElementById('philosophy').scrollIntoView({behavior: 'smooth'})">开启雅致之旅</button>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section id="philosophy" class="philosophy">
+            <div class="container">
+                <h2>清澄有馀，幽素为本</h2>
+                <p class="section-subtitle">“清澄有馀幽素香”并非单纯指代某种具体的香氛，而是一种追求内心宁静、生活简朴与精神高洁的境界。我们致力于传播这种源自中国传统文化的雅致生活方式。</p>
+                
+                <div class="philosophy-grid">
+                    <article class="philosophy-card">
+                        <span class="philosophy-icon">🌿</span>
+                        <h3>回归自然</h3>
+                        <p>崇尚天然材料，摒弃工业合成。无论是沉香、檀香还是草药，都取自山川草木，保留其最本真的生命力与自然气息。</p>
+                    </article>
+                    <article class="philosophy-card">
+                        <span class="philosophy-icon">🍵</span>
+                        <h3>静心独处</h3>
+                        <p>在快节奏的现代生活中，通过品香、焚香来放慢脚步。这是一种与自己对话的方式，让思绪在缭绕的香气中沉淀。</p>
+                    </article>
+                    <article class="philosophy-card">
+                        <span class="philosophy-icon">🧘</span>
+                        <h3>素雅之美</h3>
+                        <p>不追求奢华繁复的装饰，而是欣赏留白与克制。清澄的香气能净化环境，幽素的格调能滋养心灵。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="featured">
+            <div class="container">
+                <h2>雅致生活指南</h2>
+                <p class="section-subtitle">如何在家中营造“清澄有馀”的氛围？从香器的选择到空间的布置，我们提供专业的建议。</p>
+                
+                <div class="guide-grid">
+                    <article class="guide-item">
+                        <img src="https://picsum.photos/seed/lantern/400/300" alt="香道器具" class="guide-img">
+                        <div class="guide-content">
+                            <span class="guide-tag">器具鉴赏</span>
+                            <h3>素雅香器的选择</h3>
+                            <p>陶瓷与竹木是营造幽素氛围的最佳选择。了解如何根据香型与空间大小挑选合适的香炉与香插。</p>
+                            <a href="#" class="guide-link">阅读指南</a>
+                        </div>
+                    </article>
+                    <article class="guide-item">
+                        <img src="https://picsum.photos/seed/tea/400/300" alt="品茶闻香" class="guide-img">
+                        <div class="guide-content">
+                            <span class="guide-tag">生活美学</span>
+                            <h3>香茶相伴的仪式感</h3>
+                            <p>茶香与香气的层次交融，能极大提升品茗体验。学习如何搭配不同的茶与香，达到“清澄有馀”的感官享受。</p>
+                            <a href="#" class="guide-link">了解搭配</a>
+                        </div>
+                    </article>
+                    <article class="guide-item">
+                        <img src="https://picsum.photos/seed/room/400/300" alt="禅意空间" class="guide-img">
+                        <div class="guide-content">
+                            <span class="guide-tag">空间布置</span>
+                            <h3>打造清幽书房角落</h3>
+                            <p>一个简单的博古架、一盏柔和的灯光、一炉清幽的香，就能让书房成为心灵的栖息地。</p>
+                            <a href="#" class="guide-link">布置方案</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Quiz Section -->
+        <section id="quiz" class="quiz-section">
+            <div class="container">
+                <h2>意境测试：你适合哪种“清澄”风格？</h2>
+                <p class="section-subtitle">通过简单的选择，了解您内心深处的雅致偏好。</p>
+                
+                <div class="quiz-box">
+                    <div id="quiz-content">
+                        <p style="font-size: 1.2rem; margin-bottom: 2rem;">若身处荒野，您首先注意到的是？</p>
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <button class="quiz-btn" onclick="showQuizResult('禅茶')">A. 远山如黛，云雾缭绕</button>
+                            <button class="quiz-btn" onclick="showQuizResult('隐逸')">B. 篱落疏疏一径深，树头花落未成阴</button>
+                            <button class="quiz-btn" onclick="showQuizResult('清简')">C. 墙角数枝梅，凌寒独自开</button>
+                        </div>
+                    </div>
+                    <div id="quiz-result" style="display: none; margin-top: 2rem;">
+                        <h3 id="result-title" style="color: var(--accent-color); margin-bottom: 1rem;"></h3>
+                        <p id="result-desc"></p>
+                        <button class="quiz-btn" onclick="resetQuiz()">重新测试</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <h2>常见问题</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <div class="faq-question">什么是“幽素香”？</div>
+                        <div class="faq-answer">
+                            “幽素香”指的是一种清淡、自然、不张扬的香气。它不同于浓烈的香水味，更注重香气的持久与留白，给人以宁静、深远的感觉。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">新手入门适合什么香型？</div>
+                        <div class="faq-answer">
+                            对于新手，建议从沉香（如惠安香）或檀香（如老山檀）入手。这些香型香气沉稳、平和，容易让人静下心来，且包容性强。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">香道对室内空气质量有影响吗？</div>
+                        <div class="faq-answer">
+                            优质的天然香材燃烧后会产生负离子，有助于净化空气。但需注意通风，避免在密闭空间长时间使用，以免嗅觉疲劳。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>清澄有馀幽素香</h3>
+                    <p>致力于传播中国传统雅致文化，让现代人在忙碌的生活中找到一片心灵的净土。以香为媒，以心传心。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>文化</h4>
+                    <ul>
+                        <li><a href="#">香道历史</a></li>
+                        <li><a href="#">文人雅集</a></li>
+                        <li><a href="#">古籍赏析</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>指南</h4>
+                    <ul>
+                        <li><a href="#">选香技巧</a></li>
+                        <li><a href="#">器具养护</a></li>
+                        <li><a href="#">礼仪规范</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于</h4>
+                    <ul>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">版权声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 清澄有馀幽素香文化站. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                const isActive = parent.classList.contains('active');
+                
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                
+                // Toggle clicked item
+                if (!isActive) {
+                    parent.classList.add('active');
+                }
+            });
+        });
+
+        // Simple Quiz Logic
+        function showQuizResult(type) {
+            const content = document.getElementById('quiz-content');
+            const result = document.getElementById('quiz-result');
+            const title = document.getElementById('result-title');
+            const desc = document.getElementById('result-desc');
+
+            content.style.display = 'none';
+            result.style.display = 'block';
+
+            if (type === '禅茶') {
+                title.textContent = '禅茶一味';
+                desc.textContent = '您的心境如茶般清澈，善于在平淡中品味真味。适合品饮绿茶、白茶，享受“且将新火试新茶”的闲适。';
+            } else if (type === '隐逸') {
+                title.textContent = '归隐山林';
+                desc.textContent = '您向往自由与宁静，不喜喧嚣。适合沉香与老檀香，营造一种“采菊东篱下”的淡泊氛围。';
+            } else if (type === '清简') {
+                title.textContent = '清简自持';
+                desc.textContent = '您拥有坚韧的内心，如寒梅般独立。适合龙脑香或草药香，彰显您“零落成泥碾作尘，只有香如故”的品格。';
+            }
+        }
+
+        function resetQuiz() {
+            document.getElementById('quiz-content').style.display = 'block';
+            document.getElementById('quiz-result').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
