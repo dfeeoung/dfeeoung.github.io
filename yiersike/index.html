@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="伊尔丝科赫 - 德国著名女性主义作家与哲学家，其作品深刻探讨女性主体性与存在主义。本站提供伊尔丝科赫生平简介、代表作品《她》与《爱的几何学》深度解读、核心哲学思想梳理以及相关学术研究资料。">
+    <meta name="keywords" content="伊尔丝科赫, 女性主义哲学, 德国作家, 她的存在, 爱的几何学, 现代文学, 学术研究">
+    <title>伊尔丝科赫 - 德国女性主义文学与哲学研究中心</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-padding {
+            padding: 4rem 0;
+        }
+
+        .text-center { text-align: center; }
+        .text-accent { color: var(--accent-color); }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--primary-color);
+        }
+
+        .btn-subscribe {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .btn-subscribe:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            padding: 6rem 0 8rem;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .hero-text p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Featured Works (Grid) */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: -4rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .book-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .book-cover {
+            height: 400px;
+            background-color: #ddd;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .book-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-color);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .book-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .book-meta {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .book-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .book-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .book-link::after {
+            content: '→';
+            margin-left: 5px;
+            transition: margin-left 0.2s;
+        }
+
+        .book-link:hover::after {
+            margin-left: 10px;
+        }
+
+        /* Philosophy Section */
+        .philosophy {
+            background-color: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text-light);
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .concept-card {
+            padding: 2rem;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            background: #fafafa;
+        }
+
+        .concept-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .concept-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .concept-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Timeline / Biography */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: #eee;
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 3rem;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 3rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px var(--accent-color);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -10px;
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: white;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            margin-top: 1rem;
+            color: var(--text-light);
+            display: none;
+            padding-left: 1rem;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand p {
+            margin-top: 1rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin: 1rem 0;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .philosophy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 0;
+                text-align: left;
+            }
+
+            .timeline-item:nth-child(odd) {
+                left: 0;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-dot {
+                left: 12px !important;
+                right: auto !important;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">伊尔丝科赫<span>研究中心</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#works">代表作品</a></li>
+                    <li><a href="#philosophy">核心思想</a></li>
+                    <li><a href="#timeline">生平年表</a></li>
+                    <li><a href="#research">学术研究</a></li>
+                </ul>
+            </nav>
+            <a href="#subscribe" class="btn-subscribe">订阅更新</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>探寻女性主体性的<br>现代文学丰碑</h1>
+                    <p>深入解析德国当代作家伊尔丝科赫的文学世界，从《她》到《爱的几何学》，剖析其作品中蕴含的存在主义哲学与女性主义视角。</p>
+                    <a href="#works" style="color: var(--accent-color); font-weight: 600;">浏览核心著作 &rarr;</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/elskeoh/600/700" alt="伊尔丝科赫肖像概念图" width="600" height="700">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Works -->
+        <section id="works" class="container">
+            <div class="featured-grid">
+                <!-- Book 1 -->
+                <article class="book-card">
+                    <div class="book-cover">
+                        <img src="https://picsum.photos/seed/book1/400/600" alt="《她》书籍封面" width="400" height="600">
+                    </div>
+                    <div class="book-info">
+                        <span class="book-tag">长篇小说</span>
+                        <h3 class="book-title">《她：孤独的几何学》</h3>
+                        <p class="book-meta">2018 · 德语原版 / 中文译本</p>
+                        <p class="book-desc">本书是伊尔丝科赫的成名作，通过一位女性在柏林都市生活中的精神漫游，探讨了现代人在原子化社会中的孤独感与自我重构。</p>
+                        <a href="#" class="book-link">阅读深度解读</a>
+                    </div>
+                </article>
+
+                <!-- Book 2 -->
+                <article class="book-card">
+                    <div class="book-cover">
+                        <img src="https://picsum.photos/seed/book2/400/600" alt="《爱的几何学》书籍封面" width="400" height="600">
+                    </div>
+                    <div class="book-info">
+                        <span class="book-tag">哲学随笔</span>
+                        <h3 class="book-title">《爱的几何学》</h3>
+                        <p class="book-meta">2021 · 修订版</p>
+                        <p class="book-desc">一本关于亲密关系与爱的哲学沉思录。作者用严谨的逻辑解构了传统情感叙事，提出了“非占有式爱”的全新理论模型。</p>
+                        <a href="#" class="book-link">获取章节试读</a>
+                    </div>
+                </article>
+
+                <!-- Book 3 -->
+                <article class="book-card">
+                    <div class="book-cover">
+                        <img src="https://picsum.photos/seed/book3/400/600" alt="《无声的呐喊》书籍封面" width="400" height="600">
+                    </div>
+                    <div class="book-info">
+                        <span class="book-tag">纪实文学</span>
+                        <h3 class="book-title">《无声的呐喊》</h3>
+                        <p class="book-meta">2023 · 荣获“魏玛书卷奖”</p>
+                        <p class="book-desc">基于大量真实访谈记录，本书记录了当代女性在职场与家庭双重压力下的真实生存状态，具有极高的社会研究价值。</p>
+                        <a href="#" class="book-link">查看研究数据</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section id="philosophy" class="section-padding philosophy">
+            <div class="container">
+                <div class="section-header">
+                    <h2>核心思想体系</h2>
+                    <p>伊尔丝科赫的文学创作不仅是叙事，更是一种哲学实践。她的理论框架对当代人文社科研究具有重要参考意义。</p>
+                </div>
+
+                <div class="philosophy-grid">
+                    <div class="concept-card">
+                        <div class="concept-icon">◎</div>
+                        <h3>主体性重构</h3>
+                        <p>主张女性不应被定义为被凝视的客体，而是通过自我认知的行动，重新确立在语言与符号中的主体地位。</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-icon">∞</div>
+                        <h3>非二元论视角</h3>
+                        <p>打破传统性别对立的二元思维，提出“流动性自我”的概念，强调身份认同的动态变化与多维可能性。</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-icon">◇</div>
+                        <h3>爱的结构主义</h3>
+                        <p>将爱情视为一种社会契约与权力结构的博弈，而非纯粹的情感宣泄，倡导建立在平等与尊重基础上的新型关系。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>生平年表</h2>
+                    <p>回顾伊尔丝科赫的学术与创作生涯关键节点。</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <span class="timeline-date">1985年</span>
+                        <h3>出生于法兰克福</h3>
+                        <p>在一个重视教育的知识分子家庭长大，早年展现出对哲学与文学的浓厚兴趣。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <span class="timeline-date">2010年</span>
+                        <h3>柏林自由大学博士毕业</h3>
+                        <p>以关于德国存在主义女性主义者的论文获得哲学博士学位，奠定学术基础。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <span class="timeline-date">2014年</span>
+                        <h3>出版首部长篇小说《她》</h3>
+                        <p>该书迅速登上德国畅销书榜，并翻译成多国语言，确立其文坛地位。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <span class="timeline-date">2018年</span>
+                        <h3>获“海涅奖学金”</h3>
+                        <p>获得德国文学界最高荣誉之一，并受邀在耶鲁大学进行为期半年的访问学者研究。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-padding faq">
+            <div class="container" style="max-width: 800px;">
+                <div class="section-header">
+                    <h2>常见问题 (FAQ)</h2>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">伊尔丝科赫的主要文学流派是什么？</div>
+                    <div class="faq-answer">
+                        伊尔丝科赫的作品主要属于现代主义文学与存在主义哲学的结合体。她擅长将复杂的哲学思辨融入细腻的叙事中，常被归类为当代德语文学中的“城市小说”与“女性主义文学”。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">哪里可以购买到她作品的中文译本？</div>
+                    <div class="faq-answer">
+                        目前，《她》与《爱的几何学》的中文版已由多家知名出版社引进出版，主要在大型电商平台、线下书店的文学类专区以及部分高校图书馆均有上架。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">她的作品对女性主义研究有何贡献？</div>
+                    <div class="faq-answer">
+                        她的贡献在于超越了传统的“受害者叙事”，转而强调女性的能动性与主体性。她的理论为理解现代女性在复杂社会结构中的处境提供了新的视角。
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="subscribe">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" style="color: white;">伊尔丝科赫<span>研究中心</span></a>
+                    <p>致力于传播德国当代女性主义文学思想，提供最权威的学术资料与阅读指南。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">官方网站</a></li>
+                        <li><a href="#">出版商页面</a></li>
+                        <li><a href="#">学术数据库</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>阅读指南</h4>
+                    <ul>
+                        <li><a href="#">入门推荐</a></li>
+                        <li><a href="#">术语表</a></li>
+                        <li><a href="#">研讨会视频</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>contact@elskeoh-study.org</li>
+                        <li>柏林, 德国</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 伊尔丝科赫研究中心 版权所有. 本站为学术资料展示平台.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
