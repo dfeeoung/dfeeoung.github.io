@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大局为重 - 深度战略思维与决策智慧指南</title>
+    <meta name="description" content="大局为重 - 本站致力于提供关于战略思维、宏观决策、团队协作与长远规划的深度指南。帮助个人与组织在复杂环境中平衡短期利益与长期目标，培养全局视野。">
+    <meta name="keywords" content="大局为重,战略思维,宏观决策,团队管理,长远规划,全局视野">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e1e4e8;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Core Concept Section */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .concept-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent-color);
+            transition: transform 0.2s;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .concept-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .concept-card h3 {
+            margin-bottom: 0.8rem;
+            font-size: 1.25rem;
+        }
+
+        .concept-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Application Scenarios */
+        .bg-light {
+            background-color: #f1f3f5;
+        }
+
+        .scenario-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .scenario-item {
+            display: flex;
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .scenario-number {
+            background: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .scenario-content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .scenario-content p {
+            color: var(--text-secondary);
+        }
+
+        /* Decision Matrix */
+        .matrix-container {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f8f9fa;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .check {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .cross {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-secondary);
+            display: none;
+            border-top: 1px solid transparent;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            border-top-color: var(--border-color);
+            padding-top: 1rem;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .scenario-item {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">大局<span>为重</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#core" class="active">核心概念</a></li>
+                    <li><a href="#scenarios">应用场景</a></li>
+                    <li><a href="#framework">决策框架</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>超越局部，洞察全局</h1>
+                <p>在复杂多变的环境中，如何平衡短期利益与长远发展？掌握“大局为重”的战略思维，做出更明智的决策。</p>
+                <div class="hero-tags">
+                    <span class="tag">战略规划</span>
+                    <span class="tag">团队协作</span>
+                    <span class="tag">资源分配</span>
+                    <span class="tag">风险控制</span>
+                </div>
+                <div>
+                    <a href="#core" class="btn btn-primary">开始探索</a>
+                    <a href="#scenarios" class="btn btn-outline" style="color:white; border-color:white; margin-left:10px;">查看案例</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Concept Section -->
+        <section id="core" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>什么是“大局为重”？</h2>
+                    <p>大局为重不仅仅是一种口号，更是一种系统性思维方法。它要求决策者在面对冲突或选择时，优先考虑整体利益、长远目标和核心价值，而非局限于眼前得失。</p>
+                </div>
+
+                <div class="concept-grid">
+                    <article class="concept-card">
+                        <span class="concept-icon">🎯</span>
+                        <h3>全局视野</h3>
+                        <p>跳出具体的部门和岗位限制，理解决策对整个组织生态系统的影响。看见“森林”而非仅仅关注“树木”。</p>
+                    </article>
+                    <article class="concept-card">
+                        <span class="concept-icon">⏳</span>
+                        <h3>长期主义</h3>
+                        <p>不因短期的波动而动摇根本方向。通过牺牲部分短期利益来换取长期竞争力的提升和可持续的增长。</p>
+                    </article>
+                    <article class="concept-card">
+                        <span class="concept-icon">⚖️</span>
+                        <h3>价值平衡</h3>
+                        <p>在效率、质量、成本和速度之间寻找最优解。承认不同维度的重要性，寻求整体价值最大化的平衡点。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Scenarios -->
+        <section id="scenarios" class="section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>典型应用场景</h2>
+                    <p>当冲突发生时，如何运用大局思维进行化解与决策？</p>
+                </div>
+
+                <div class="scenario-list">
+                    <div class="scenario-item">
+                        <div class="scenario-number">1</div>
+                        <div class="scenario-content">
+                            <h3>跨部门资源争夺</h3>
+                            <p>当多个部门都急需同一笔预算或人力时，管理者应基于公司整体战略目标进行分配，而非仅看各部门的紧急程度。</p>
+                        </div>
+                    </div>
+                    <div class="scenario-item">
+                        <div class="scenario-number">2</div>
+                        <div class="scenario-content">
+                            <h3>危机公关处理</h3>
+                            <p>在品牌声誉受损时，有时为了长远发展，需要主动承担责任甚至承担经济损失，以修复公众信任，而非推卸责任。</p>
+                        </div>
+                    </div>
+                    <div class="scenario-item">
+                        <div class="scenario-number">3</div>
+                        <div class="scenario-content">
+                            <h3>个人职业规划</h3>
+                            <p>在面临高薪但枯燥的工作机会与低薪但成长性高的机会时，以“大局为重”意味着选择更有利于长期能力积累的路径。</p>
+                        </div>
+                    </div>
+                    <div class="scenario-item">
+                        <div class="scenario-number">4</div>
+                        <div class="scenario-content">
+                            <h3>团队协作冲突</h3>
+                            <p>团队成员因技术路线或审美偏好发生争执时，领导者应关注项目最终交付质量和用户体验这一“大局”，而非纠结于个人喜好。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Decision Framework -->
+        <section id="framework" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>决策评估框架</h2>
+                    <p>当需要做出“大局为重”的决策时，可以参考以下维度进行评估。</p>
+                </div>
+
+                <div class="matrix-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>评估维度</th>
+                                <th>短期视角</th>
+                                <th>大局视角</th>
+                                <th>决策建议</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>成本控制</td>
+                                <td class="cross">严格限制成本</td>
+                                <td class="check">投入必要资源保障核心</td>
+                                <td>在非核心领域削减成本，在关键领域加大投入</td>
+                            </tr>
+                            <tr>
+                                <td>风险承担</td>
+                                <td class="cross">规避所有风险</td>
+                                <td class="check">承担可控风险获取收益</td>
+                                <td>评估风险收益比，支持创新尝试</td>
+                            </tr>
+                            <tr>
+                                <td>沟通方式</td>
+                                <td>内部信息独享</td>
+                                <td class="check">信息透明，全员对齐</td>
+                                <td>打破信息孤岛，建立共享机制</td>
+                            </tr>
+                            <tr>
+                                <td>时间跨度</td>
+                                <td>季度/月度考核</td>
+                                <td class="check">年度/长期战略</td>
+                                <td>建立长效激励机制，淡化短期KPI压力</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">大局为重是否意味着要牺牲个人利益？</div>
+                    <div class="faq-answer">并非绝对牺牲。在组织或团队中，个人利益往往与集体利益高度相关。通过提升整体大局的绩效，个人也能获得更稳固的发展平台和更高的回报。真正的“大局为重”是寻求个人与集体的共赢。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">如何判断自己是否具备大局思维？</div>
+                    <div class="faq-answer">可以尝试在遇到问题时，先问自己三个问题：这个问题对公司的核心目标有什么影响？我的决定会影响哪些利益相关者？如果我离开这个岗位，这个决定还会有效吗？</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">当短期利益与长期目标冲突时，该如何取舍？</div>
+                    <div class="faq-answer">通常建议建立“缓冲期”机制。在保证底线目标不崩塌的前提下，给予短期目标一定的容错空间，重点资源向长期目标倾斜。如果冲突不可调和，必须明确长期目标的优先级。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>大局为重</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem;">致力于传播战略思维与宏观决策智慧，帮助个人与组织在复杂环境中把握方向。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>核心内容</h4>
+                    <ul>
+                        <li><a href="#">战略规划指南</a></li>
+                        <li><a href="#">团队协作艺术</a></li>
+                        <li><a href="#">风险管理实务</a></li>
+                        <li><a href="#">领导力发展</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">联系合作</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">使用条款</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 大局为重战略思维网. 保留所有权利.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
