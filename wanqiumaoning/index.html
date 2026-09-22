@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>晚秋毛宁-经典怀旧金曲回顾与音乐赏析</title>
+    <meta name="description" content="晚秋毛宁专题页，收录毛宁经典歌曲《晚秋》及相关怀旧音乐作品，提供歌词赏析、音乐背景介绍及怀旧金曲试听体验。">
+    <meta name="keywords" content="晚秋毛宁,毛宁晚秋,怀旧金曲,经典老歌,毛宁,晚秋歌词">
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2691E;
+            --bg-color: #fdfbf7;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 1rem;
+            border-left: 5px solid var(--primary-color);
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/seed/autumn/1600/600.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 6rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* Featured Song Section */
+        .featured-song {
+            background-color: var(--card-bg);
+            margin-top: -3rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .album-art {
+            flex: 1 1 300px;
+            min-height: 300px;
+            background-color: #ddd;
+            position: relative;
+        }
+
+        .album-art img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .play-overlay:hover {
+            background: rgba(0,0,0,0.5);
+        }
+
+        .play-icon {
+            font-size: 4rem;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .song-details {
+            flex: 1 1 400px;
+            padding: 2rem;
+        }
+
+        .song-meta {
+            color: var(--secondary-color);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .song-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .artist {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .lyrics-preview {
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-left: 3px solid var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        /* Discography Grid */
+        .discography-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .album-card {
+            background: var(--card-bg);
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .album-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .album-cover {
+            height: 200px;
+            background-color: #eee;
+        }
+
+        .album-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .album-info {
+            padding: 1rem;
+        }
+
+        .album-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .album-year {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: #fff;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .header-inner { flex-direction: column; height: auto; padding: 1rem 0; }
+            nav ul { margin-top: 1rem; gap: 1rem; }
+            .about-content { flex-direction: column; }
+            .featured-song { margin-top: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <span>🎵</span> 晚秋毛宁
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#featured">精选</a></li>
+                <li><a href="#discography">专辑</a></li>
+                <li><a href="#about">关于</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>晚秋毛宁</h1>
+        <p>重温90年代华语乐坛经典，感受《晚秋》中那份凄美与沧桑</p>
+        <a href="#featured" class="btn">立即聆听</a>
+    </section>
+
+    <!-- Featured Song -->
+    <section id="featured" class="container">
+        <div class="section-title">本周主打：晚秋</div>
+        <div class="featured-song">
+            <div class="album-art">
+                <img src="https://picsum.photos/seed/autumn_cover/600/600.jpg" alt="晚秋专辑封面">
+                <div class="play-overlay" onclick="togglePlay()">
+                    <div class="play-icon">▶</div>
+                </div>
+            </div>
+            <div class="song-details">
+                <div class="song-meta">经典怀旧金曲</div>
+                <h2 class="song-title">晚秋</h2>
+                <div class="artist">演唱：毛宁 | 作词：陈卓然 | 作曲：Koh Mi-Su</div>
+                <p class="lyrics-preview">
+                    “故事在深秋，风吹落了红叶...”<br>
+                    这首由陈卓然作词、韩国作曲家Koh Mi-Su谱曲的《晚秋》，是毛宁最具代表性的作品之一。歌曲旋律优美深情，歌词意境深远，完美诠释了秋日的萧瑟与爱情的遗憾，成为跨越时代的传唱经典。
+                </p>
+                <p>歌曲收录于毛宁1993年的专辑《晚秋》中，该专辑销量极高，奠定了毛宁在华语流行乐坛的巨星地位。</p>
+                <div style="margin-top: 1.5rem;">
+                    <button class="btn" onclick="alert('正在为您加载试听资源...')">试听完整版</button>
+                    <button class="btn" style="background-color: transparent; border: 1px solid #ccc; margin-left: 10px;" onclick="alert('歌词功能仅供展示')">查看歌词</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discography -->
+    <section id="discography" class="section container">
+        <div class="section-title">经典专辑</div>
+        <div class="discography-grid">
+            <article class="album-card">
+                <div class="album-cover">
+                    <img src="https://picsum.photos/seed/album1/300/300.jpg" alt="晚秋专辑">
+                </div>
+                <div class="album-info">
+                    <div class="album-title">晚秋 (1993)</div>
+                    <div class="album-year">发行年份：1993</div>
+                </div>
+            </article>
+            <article class="album-card">
+                <div class="album-cover">
+                    <img src="https://picsum.photos/seed/album2/300/300.jpg" alt="苦果专辑">
+                </div>
+                <div class="album-info">
+                    <div class="album-title">苦果 (1995)</div>
+                    <div class="album-year">发行年份：1995</div>
+                </div>
+            </article>
+            <article class="album-card">
+                <div class="album-cover">
+                    <img src="https://picsum.photos/seed/album3/300/300.jpg" alt="涛声依旧专辑">
+                </div>
+                <div class="album-info">
+                    <div class="album-title">涛声依旧 (1994)</div>
+                    <div class="album-year">发行年份：1994</div>
+                </div>
+            </article>
+            <article class="album-card">
+                <div class="album-cover">
+                    <img src="https://picsum.photos/seed/album4/300/300.jpg" alt="今宵多珍重">
+                </div>
+                <div class="album-info">
+                    <div class="album-title">今宵多珍重 (1996)</div>
+                    <div class="album-year">发行年份：1996</div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- About / Context -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/manning/600/400.jpg" alt="毛宁">
+                </div>
+                <div class="about-text">
+                    <div class="section-title">关于《晚秋》</div>
+                    <p>《晚秋》是毛宁职业生涯中最重要的作品之一。这首歌曲由韩国著名音乐人Koh Mi-Su作曲，陈卓然填词。歌曲的灵感来源于电影《晚秋》，讲述了一个在深秋时节重逢的凄美故事。</p>
+                    <br>
+                    <p>毛宁以其清澈、深情的嗓音，将歌曲中那种“在风中起舞”的无奈与执着演绎得淋漓尽致。该歌曲不仅在国内大获成功，还在东南亚地区广受欢迎，是华语流行音乐走向国际的重要代表作。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>晚秋毛宁</h4>
+                <p>致力于收录和推广华语经典怀旧音乐，让更多人了解毛宁的艺术成就。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#featured">精选歌曲</a></li>
+                    <li><a href="#discography">专辑列表</a></li>
+                    <li><a href="#about">歌手简介</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>相关资源</h4>
+                <ul>
+                    <li><a href="#">歌词大全</a></li>
+                    <li><a href="#">MV合集</a></li>
+                    <li><a href="#">粉丝论坛</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 晚秋毛宁怀旧音乐站. All rights reserved. 本站仅为音乐爱好者交流展示使用.
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<script>
+    function togglePlay() {
+        const icon = document.querySelector('.play-icon');
+        if (icon.innerText === '▶') {
+            icon.innerText = '❚❚';
+            alert('模拟播放：正在播放歌曲《晚秋》');
+        } else {
+            icon.innerText = '▶';
+        }
+    }
+</script>
+
+</body>
+  </html>
