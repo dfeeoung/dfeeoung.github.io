@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="wow51900319 - 深度游戏攻略与资源导航中心，提供最新版本更新、职业配装指南及玩家社区交流。">
+    <meta name="keywords" content="wow51900319, 游戏攻略, 职业配装, 版本更新, 资源导航">
+    <title>wow51900319 - 游戏攻略与资源导航中心</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0078d4;
+            --secondary-color: #1f1f1f;
+            --accent-color: #ffb900;
+            --text-color: #333;
+            --bg-color: #f0f2f5;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #005a9e;
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e1e1e1;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        /* Guide Cards */
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .guide-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .guide-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .guide-info h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .guide-info p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .guide-tag {
+            background-color: #e6f7ff;
+            color: #0078d4;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Sidebar */
+        .sidebar-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .quick-links li {
+            border-bottom: 1px solid #eee;
+        }
+
+        .quick-links li:last-child {
+            border-bottom: none;
+        }
+
+        .quick-links a {
+            display: block;
+            padding: 0.8rem 0;
+            color: #555;
+        }
+
+        .quick-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #aaa;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav {
+                display: none; /* Simplified for mobile */
+            }
+
+            .nav-wrapper {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">wow51900319<span>攻略站</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">职业攻略</a></li>
+                    <li><a href="#">副本指南</a></li>
+                    <li><a href="#">资源下载</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>探索 wow51900319 的世界</h1>
+            <p>为您提供最新版本的职业配装、副本机制解析及玩家社区交流平台。无论是新手入门还是老玩家进阶，这里都有您需要的核心资源。</p>
+            <a href="#guides" class="cta-button">开始浏览攻略</a>
+        </section>
+
+        <!-- Main Content Area -->
+        <div class="content-grid">
+            
+            <!-- Left Column: Guides -->
+            <div class="main-column">
+                <section id="guides">
+                    <div class="section-header">
+                        <h2 class="section-title">最新热门攻略</h2>
+                    </div>
+                    
+                    <div class="guide-list">
+                        <article class="guide-item">
+                            <div class="guide-info">
+                                <h3>当前版本最强DPS职业排行分析</h3>
+                                <p>基于最新副本数据，深度解析各职业输出环境与配装思路。</p>
+                            </div>
+                            <span class="guide-tag">PVE</span>
+                        </article>
+
+                        <article class="guide-item">
+                            <div class="guide-info">
+                                <h3>T坦克生存指南：硬核副本生存技巧</h3>
+                                <p>掌握仇恨控制与血线管理，成为团队中最坚实的后盾。</p>
+                            </div>
+                            <span class="guide-tag">PVE</span>
+                        </article>
+
+                        <article class="guide-item">
+                            <div class="guide-info">
+                                <h3>PVP竞技场战术手册：点位与干扰</h3>
+                                <p>从资源控制到关键技能释放，提升您的竞技场胜率。</p>
+                            </div>
+                            <span class="guide-tag">PVP</span>
+                        </article>
+
+                        <article class="guide-item">
+                            <div class="guide-info">
+                                <h3>经济系统解析：金币获取与投资</h3>
+                                <p>了解市场波动，掌握低成本高效益的赚钱途径。</p>
+                            </div>
+                            <span class="guide-tag">经济</span>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="news">
+                    <div class="section-header">
+                        <h2 class="section-title">版本更新资讯</h2>
+                    </div>
+                    <div class="guide-list">
+                        <article class="guide-item">
+                            <div class="guide-info">
+                                <h3>v3.2.0 补丁说明：新职业平衡调整</h3>
+                                <p>详细阅读官方更新日志，了解对您角色的影响。</p>
+                            </div>
+                        </article>
+                        <article class="guide-item">
+                            <div class="guide-info">
+                                <h3>即将到来的限时活动预告</h3>
+                                <p>获取活动奖励的详细时间表与参与条件。</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h3>快速导航</h3>
+                    <ul class="quick-links">
+                        <li><a href="#">职业选择模拟器</a></li>
+                        <li><a href="#">副本CD时间表</a></li>
+                        <li><a href="#">装备评分查询</a></li>
+                        <li><a href="#">插件下载中心</a></li>
+                        <li><a href="#">玩家论坛</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>热门讨论</h3>
+                    <ul class="quick-links">
+                        <li><a href="#">关于新地图的BUG反馈</a></li>
+                        <li><a href="#">寻找固定队（坦克）</a></li>
+                        <li><a href="#">萌新求带：卡在XX关卡</a></li>
+                        <li><a href="#">交易版：低价出极品装备</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card" style="background: #e6f7ff; border: 1px solid #91d5ff;">
+                    <h3>公告</h3>
+                    <p style="font-size: 0.9rem; color: #555;">网站维护通知：每周三凌晨2点至4点进行服务器维护，请提前保存进度。</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于 wow51900319</h4>
+                    <p style="font-size: 0.9rem;">致力于为玩家提供最全面、最及时的游戏攻略与资源分享平台。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>资源分类</h4>
+                    <ul>
+                        <li><a href="#">职业技能</a></li>
+                        <li><a href="#">天赋树</a></li>
+                        <li><a href="#">坐骑图鉴</a></li>
+                        <li><a href="#">成就列表</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">联系站长</a></li>
+                        <li><a href="#">免责声明</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 wow51900319 攻略站. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
