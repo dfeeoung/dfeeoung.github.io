@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>好看的武侠小说-经典门派、江湖传说与在线阅读推荐</title>
+    <meta name="description" content="本站致力于为武侠小说爱好者提供最优质的阅读体验。收录金庸、古龙、梁羽生等名家经典，以及现代优秀原创武侠作品。包含门派介绍、武功秘籍、江湖排行榜及最新连载更新。">
+    <meta name="keywords" content="好看的武侠小说,在线阅读,金庸全集,古龙全集,玄幻武侠,武侠小说排行榜,江湖传说">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B0000; /* 深红，象征江湖热血 */
+            --secondary-color: #2c2c2c; /* 深灰，沉稳背景 */
+            --accent-color: #d4af37; /* 金色，象征荣誉与秘籍 */
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f4f4f4;
+            --bg-card: #ffffff;
+            --spacing-unit: 1rem;
+            --border-radius: 4px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            border: 2px solid var(--primary-color);
+            padding: 2px 8px;
+            font-size: 1rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .search-box {
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .search-box input {
+            border: none;
+            padding: 8px 15px;
+            outline: none;
+            width: 200px;
+        }
+
+        .search-box button {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 0 15px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background-color: #660000;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/seed/mountain/1920/600.jpg') no-repeat center center/cover;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: #660000;
+            transform: translateY(-2px);
+        }
+
+        /* 分类导航 */
+        .category-nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .cat-btn {
+            background-color: var(--bg-card);
+            padding: 10px 25px;
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+            font-size: 1rem;
+            color: var(--text-light);
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .cat-btn:hover, .cat-btn.active {
+            background-color: var(--primary-color);
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(139, 0, 0, 0.3);
+        }
+
+        /* 内容区块 */
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .section-title h2 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-right: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, var(--primary-color), transparent);
+        }
+
+        /* 排行榜 Grid */
+        .ranking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .book-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .rank-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 30px;
+            height: 30px;
+            background-color: var(--primary-color);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        .rank-badge.top-3 {
+            background-color: var(--accent-color);
+        }
+
+        .book-cover {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .book-info {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--text-main);
+            line-height: 1.4;
+        }
+
+        .book-author {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .book-tags {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            background-color: #f0f0f0;
+            color: #666;
+            border-radius: 3px;
+        }
+
+        .book-meta {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* 经典名家介绍 */
+        .masters-section {
+            background-color: var(--bg-card);
+            padding: 60px 0;
+            margin-bottom: 60px;
+        }
+
+        .masters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .master-card {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+
+        .master-card:hover {
+            border-color: var(--primary-color);
+        }
+
+        .master-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+            border: 3px solid #f9f9f9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .master-info h3 {
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+
+        .master-info .style {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .master-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* 江湖门派百科 */
+        .sectors-section {
+            margin-bottom: 60px;
+        }
+
+        .sectors-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .sector-item {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+        }
+
+        .sector-item:hover {
+            transform: translateX(5px);
+        }
+
+        .sector-item h3 {
+            margin-bottom: 8px;
+            color: var(--secondary-color);
+        }
+
+        .sector-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* 专区/新书上架 */
+        .featured-section {
+            background-color: #fff;
+            padding: 50px 0;
+            margin-bottom: 60px;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .featured-main {
+            position: relative;
+            height: 400px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .featured-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .featured-main:hover img {
+            transform: scale(1.05);
+        }
+
+        .featured-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 30px;
+            color: #fff;
+        }
+
+        .featured-overlay h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .featured-overlay p {
+            opacity: 0.8;
+            max-width: 80%;
+        }
+
+        .featured-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mini-card {
+            display: flex;
+            gap: 15px;
+            background: #fff;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            align-items: center;
+        }
+
+        .mini-card img {
+            width: 60px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .mini-card-content h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .mini-card-content span {
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--secondary-color);
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            .search-box input {
+                width: 100%;
+            }
+
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .masters-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>江湖</span> 漫笔阁
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">经典名著</a></li>
+                    <li><a href="#">新派连载</a></li>
+                    <li><a href="#">门派百科</a></li>
+                    <li><a href="#">榜单排行</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索书名、作者...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Banner -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>江湖路远，侠骨柔情</h1>
+                <p>在这里，你可以重温金庸笔下的快意恩仇，品味古龙小说中的孤独与锋芒。探索那个刀光剑影、快意恩仇的武侠世界。</p>
+                <a href="#" class="btn btn-primary">开始阅读</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- 分类筛选 -->
+            <div class="category-nav">
+                <button class="cat-btn active">全部推荐</button>
+                <button class="cat-btn">金庸全集</button>
+                <button class="cat-btn">古龙全集</button>
+                <button class="cat-btn">梁羽生</button>
+                <button class="cat-btn">温瑞安</button>
+                <button class="cat-btn">玄幻修真</button>
+                <button class="cat-btn">架空历史</button>
+            </div>
+
+            <!-- 热门排行榜 -->
+            <section>
+                <div class="section-title">
+                    <h2>热门武侠小说排行榜</h2>
+                </div>
+                <div class="ranking-grid">
+                    <!-- Book 1 -->
+                    <article class="book-card">
+                        <div class="rank-badge top-3">1</div>
+                        <img src="https://picsum.photos/seed/book1/300/400.jpg" alt="天龙八部封面" class="book-cover">
+                        <div class="book-info">
+                            <h3 class="book-title">天龙八部</h3>
+                            <p class="book-author">作者：金庸</p>
+                            <div class="book-tags">
+                                <span class="tag">经典</span>
+                                <span class="tag">金庸</span>
+                            </div>
+                            <div class="book-meta">
+                                <span>热度：98.5万</span>
+                                <span>连载：已完结</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book 2 -->
+                    <article class="book-card">
+                        <div class="rank-badge top-3">2</div>
+                        <img src="https://picsum.photos/seed/book2/300/400.jpg" alt="笑傲江湖封面" class="book-cover">
+                        <div class="book-info">
+                            <h3 class="book-title">笑傲江湖</h3>
+                            <p class="book-author">作者：金庸</p>
+                            <div class="book-tags">
+                                <span class="tag">经典</span>
+                                <span class="tag">武侠</span>
+                            </div>
+                            <div class="book-meta">
+                                <span>热度：95.2万</span>
+                                <span>连载：已完结</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book 3 -->
+                    <article class="book-card">
+                        <div class="rank-badge top-3">3</div>
+                        <img src="https://picsum.photos/seed/book3/300/400.jpg" alt="多情剑客无情剑封面" class="book-cover">
+                        <div class="book-info">
+                            <h3 class="book-title">多情剑客无情剑</h3>
+                            <p class="book-author">作者：古龙</p>
+                            <div class="book-tags">
+                                <span class="tag">古龙</span>
+                                <span class="tag">经典</span>
+                            </div>
+                            <div class="book-meta">
+                                <span>热度：92.8万</span>
+                                <span>连载：已完结</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book 4 -->
+                    <article class="book-card">
+                        <div class="rank-badge">4</div>
+                        <img src="https://picsum.photos/seed/book4/300/400.jpg" alt="绝代双骄封面" class="book-cover">
+                        <div class="book-info">
+                            <h3 class="book-title">绝代双骄</h3>
+                            <p class="book-author">作者：古龙</p>
+                            <div class="book-tags">
+                                <span class="tag">古龙</span>
+                                <span class="tag">双雄</span>
+                            </div>
+                            <div class="book-meta">
+                                <span>热度：88.1万</span>
+                                <span>连载：已完结</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book 5 -->
+                    <article class="book-card">
+                        <div class="rank-badge">5</div>
+                        <img src="https://picsum.photos/seed/book5/300/400.jpg" alt="书剑恩仇录封面" class="book-cover">
+                        <div class="book-info">
+                            <h3 class="book-title">书剑恩仇录</h3>
+                            <p class="book-author">作者：金庸</p>
+                            <div class="book-tags">
+                                <span class="tag">金庸</span>
+                                <span class="tag">首部</span>
+                            </div>
+                            <div class="book-meta">
+                                <span>热度：85.4万</span>
+                                <span>连载：已完结</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book 6 -->
+                    <article class="book-card">
+                        <div class="rank-badge">6</div>
+                        <img src="https://picsum.photos/seed/book6/300/400.jpg" alt="陆小凤传奇封面" class="book-cover">
+                        <div class="book-info">
+                            <h3 class="book-title">陆小凤传奇</h3>
+                            <p class="book-author">作者：古龙</p>
+                            <div class="book-tags">
+                                <span class="tag">古龙</span>
+                                <span class="tag">悬疑</span>
+                            </div>
+                            <div class="book-meta">
+                                <span>热度：82.9万</span>
+                                <span>连载：已完结</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 经典名家 -->
+            <section class="masters-section">
+                <div class="section-title">
+                    <h2>武侠泰斗与名家介绍</h2>
+                </div>
+                <div class="masters-grid">
+                    <div class="master-card">
+                        <img src="https://picsum.photos/seed/jinyong/100/100.jpg" alt="金庸" class="master-avatar">
+                        <div class="master-info">
+                            <h3>金庸</h3>
+                            <p class="style">新派武侠小说泰斗</p>
+                            <p>查良镛，笔名金庸。其作品改编的影视作品风靡全球，构建了一个恢弘壮阔的武侠世界，对后世影响深远。</p>
+                        </div>
+                    </div>
+                    <div class="master-card">
+                        <img src="https://picsum.photos/seed/gulong/100/100.jpg" alt="古龙" class="master-avatar">
+                        <div class="master-info">
+                            <h3>古龙</h3>
+                            <p class="style">浪子派武侠代表</p>
+                            <p>原名熊耀华。开创了武侠小说的新风格，注重人物内心刻画与氛围营造，代表作《小李飞刀》传世。</p>
+                        </div>
+                    </div>
+                    <div class="master-card">
+                        <img src="https://picsum.photos/seed/liang/100/100.jpg" alt="梁羽生" class="master-avatar">
+                        <div class="master-info">
+                            <h3>梁羽生</h3>
+                            <p class="style">新派武侠奠基人</p>
+                            <p>原名陈世骧。其作品结构严谨，注重历史背景与武侠的结合，被誉为“新派武侠小说的开山鼻祖”。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 江湖门派百科 -->
+            <section class="sectors-section">
+                <div class="section-title">
+                    <h2>江湖门派与武功秘籍</h2>
+                </div>
+                <div class="sectors-list">
+                    <div class="sector-item">
+                        <h3>少林派</h3>
+                        <p>天下武功出少林，禅武合一，刚猛无俦，以七十二绝技闻名于世。</p>
+                    </div>
+                    <div class="sector-item">
+                        <h3>武当派</h3>
+                        <p>以太极拳、太极剑著称，讲究以柔克刚，内功深厚。</p>
+                    </div>
+                    <div class="sector-item">
+                        <h3>峨眉派</h3>
+                        <p>男女皆可习武，剑法灵动，以九阴白骨爪与峨眉刺闻名。</p>
+                    </div>
+                    <div class="sector-item">
+                        <h3>华山派</h3>
+                        <p>以剑法精妙绝伦著称，五岳剑派之一，气宗与剑宗之争曾轰动江湖。</p>
+                    </div>
+                    <div class="sector-item">
+                        <h3>逍遥派</h3>
+                        <p>神秘莫测，擅长医术与轻功，北冥神功与凌波微步为绝世武功。</p>
+                    </div>
+                    <div class="sector-item">
+                        <h3>丐帮</h3>
+                        <p>江湖第一大帮，帮主信物“打狗棒”，洪七公等一代宗师皆出此门。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 重点推荐 -->
+            <section class="featured-section">
+                <div class="section-title">
+                    <h2>本周重点推荐</h2>
+                </div>
+                <div class="featured-grid">
+                    <div class="featured-main">
+                        <img src="https://picsum.photos/seed/wuxia_main/800/600.jpg" alt="沧海一声笑">
+                        <div class="featured-overlay">
+                            <h3>沧海一声笑</h3>
+                            <p>一部融合了传统武侠与现代解构风格的力作，带你领略不一样的江湖风雨。</p>
+                        </div>
+                    </div>
+                    <div class="featured-sidebar">
+                        <div class="mini-card">
+                            <img src="https://picsum.photos/seed/mini1/100/150.jpg" alt="书名">
+                            <div class="mini-card-content">
+                                <h4>英雄志</h4>
+                                <span>热血 · 悲壮</span>
+                            </div>
+                        </div>
+                        <div class="mini-card">
+                            <img src="https://picsum.photos/seed/mini2/100/150.jpg" alt="书名">
+                            <div class="mini-card-content">
+                                <h4>大唐双龙传</h4>
+                                <span>玄幻 · 历史</span>
+                            </div>
+                        </div>
+                        <div class="mini-card">
+                            <img src="https://picsum.photos/seed/mini3/100/150.jpg" alt="书名">
+                            <div class="mini-card-content">
+                                <h4>边城浪子</h4>
+                                <span>古龙 · 经典</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于漫笔阁</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        漫笔阁致力于为广大武侠小说爱好者提供一个纯净、舒适的阅读平台。我们收录了从民国时期到当代的优秀武侠作品，致力于传承中华武侠文化。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">经典名著</a></li>
+                        <li><a href="#">新派连载</a></li>
+                        <li><a href="#">武侠论坛</a></li>
+                        <li><a href="#">投稿专区</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>阅读指南</h4>
+                    <ul>
+                        <li><a href="#">阅读条款</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">侵权举报</a></li>
+                        <li><a href="#">联系站长</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 10px;">扫描二维码，获取最新更新动态</p>
+                    <div style="width: 100px; height: 100px; background: #555; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #888;">
+                        QR Code
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 漫笔阁武侠小说网 版权所有 | 本站所有小说仅供个人试读，请支持正版。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                                  </html>
