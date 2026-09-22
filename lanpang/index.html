@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="蓝胖官方主题站 - 围绕哆啦A梦（蓝胖子）的温馨回忆、经典剧情回顾、实用道具图鉴及社区互动指南。">
+    <meta name="keywords" content="蓝胖, 哆啦A梦, 蓝胖子, 哆啦A梦道具, 经典动漫, 温馨回忆">
+    <title>蓝胖-经典动漫回顾与温馨回忆指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-blue: #4da6ff;
+            --dark-blue: #0044aa;
+            --light-bg: #f0f7ff;
+            --white: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --shadow-card: 0 4px 12px rgba(77, 166, 255, 0.15);
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark-blue);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--primary-blue);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary-blue);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary-blue);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--dark-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e0f2ff 0%, #ffffff 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--dark-blue);
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(77, 166, 255, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--dark-blue);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styles */
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--dark-blue);
+            margin-bottom: 30px;
+            padding-left: 15px;
+            border-left: 5px solid var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: normal;
+            padding-left: 15px;
+            border-left: none;
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(77, 166, 255, 0.25);
+        }
+
+        .card-img-wrapper {
+            height: 200px;
+            overflow: hidden;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            color: var(--primary-blue);
+            background: #e6f2ff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            width: fit-content;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-footer {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Featured Layout */
+        .featured-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .featured-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            position: relative;
+        }
+
+        .featured-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .featured-content {
+            padding: 40px;
+        }
+
+        .featured-content h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--dark-blue);
+        }
+
+        .featured-content p {
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+        }
+
+        /* Props List */
+        .props-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+        }
+
+        .props-item {
+            background: var(--white);
+            padding: 15px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            border: 1px solid #eee;
+            transition: var(--transition);
+        }
+
+        .props-item:hover {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .props-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .props-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Fun Facts Section */
+        .fun-facts {
+            background-color: var(--white);
+            padding: 60px 20px;
+            margin-top: 60px;
+        }
+
+        .facts-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .fact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .fact-item h3 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .fact-item p {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2b3a4a;
+            color: #ccc;
+            padding: 60px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-blue);
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: #888;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .featured-layout {
+                grid-template-columns: 1fr;
+            }
+            .featured-img {
+                height: 300px;
+            }
+            .fact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                position: relative;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>蓝</span>胖记忆
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#memory">温馨回忆</a></li>
+                    <li><a href="#props">神奇道具</a></li>
+                    <li><a href="#facts">冷知识</a></li>
+                    <li><a href="#community">社区</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <h1>来自22世纪的蓝色守护者</h1>
+            <p>重温哆啦A梦带来的欢笑与感动，探索那些改变命运的神奇道具，寻找童年最纯粹的快乐。</p>
+            <div class="cta-group">
+                <a href="#memory" class="btn btn-primary">开始回忆</a>
+                <a href="#props" class="btn btn-outline">查看道具</a>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Featured Section -->
+        <section id="memory" class="featured-layout">
+            <article class="featured-card">
+                <img src="https://picsum.photos/seed/doraemon1/800/400" alt="哆啦A梦与野比大雄" class="featured-img">
+                <div class="featured-content">
+                    <span class="card-tag">经典剧情</span>
+                    <h2>梦想与勇气的起点</h2>
+                    <p>故事始于22世纪，来自未来的猫型机器人“蓝胖”为了弥补野比大雄一生的遗憾，来到了20世纪。这不仅是一个关于友情的故事，更是一段关于如何面对挫折、寻找自我价值的成长旅程。</p>
+                    <a href="#" class="btn btn-primary">阅读更多剧情</a>
+                </div>
+            </article>
+            <aside>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://picsum.photos/seed/doraemon2/400/300" alt="大雄与静香">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">主要角色</span>
+                        <h3 class="card-title">大雄与静香</h3>
+                        <p class="card-desc">大雄虽然学习不好、运动神经迟钝，但他拥有善良和诚实的心。静香则是温柔可爱的女孩，两人的青梅竹马关系是全剧的情感核心。</p>
+                        <div class="card-footer">
+                            <span>角色档案</span>
+                            <span>→</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="margin-top: 20px;">
+                    <div class="card-body">
+                        <h3 class="card-title">必看剧场版</h3>
+                        <ul style="padding-left: 20px; font-size: 0.9rem; color: #555;">
+                            <li style="margin-bottom: 10px;">《伴我同行》</li>
+                            <li style="margin-bottom: 10px;">《大雄的日本诞生》</li>
+                            <li>《新·大雄的日本诞生》</li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <!-- Props Section -->
+       section id="props">
+            <div class="section-title">
+                <h2>神奇道具图鉴</h2>
+                <a href="#">查看全部 →</a>
+            </div>
+            <div class="grid-4">
+                <div class="props-item">
+                    <span class="props-icon">🧭</span>
+                    <div class="props-name">任意门</div>
+                </div>
+                <div class="props-item">
+                    <span class="props-icon">📷</span>
+                    <div class="props-name">照相机</div>
+                </div>
+                <div class="props-item">
+                    <span class="props-icon">🧥</span>
+                    <div class="props-name">竹蜻蜓</div>
+                </div>
+                <div class="props-item">
+                    <span class="props-icon">🧪</span>
+                    <div class="props-name">记忆面包</div>
+                </div>
+                <div class="props-item">
+                    <span class="props-icon">🎁</span>
+                    <div class="props-name">愿望成真机</div>
+                </div>
+                <div class="props-item">
+                    <span class="props-icon">🧱</span>
+                    <div class="props-name">积木人</div>
+                </div>
+                <div class="props-item">
+                    <span class="props-icon">🪜</span>
+                    <div class="props-name">升降梯</div>
+                </div>
+                <div class="props-item">
+                    <span class="props-icon">🚪</span>
+                    <div class="props-name">穿越门</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Episodes -->
+        <section class="grid-3" style="margin-top: 60px;">
+            <div class="section-title" style="grid-column: 1 / -1; margin-bottom: 20px;">热门剧集</div>
+            
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <img src="https://picsum.photos/seed/ep1/400/250" alt="第X话：大雄的结婚前夜">
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">情感</span>
+                    <h3 class="card-title">大雄的结婚前夜</h3>
+                    <p class="card-desc">大雄与静香即将步入婚姻殿堂，蓝胖回忆起两人共同经历的点点滴滴，展现了深厚的羁绊。</p>
+                    <div class="card-footer">
+                        <span>更新至第X话</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <img src="https://picsum.photos/seed/ep2/400/250" alt="第X话：大雄的东京奥运会">
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">热血</span>
+                    <h3 class="card-title">大雄的东京奥运会</h3>
+                    <p class="card-desc">为了参加未来的奥运会，大雄在蓝胖的帮助下刻苦训练，最终克服了身体条件的限制。</p>
+                    <div class="card-footer">
+                        <span>更新至第X话</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <img src="https://picsum.photos/seed/ep3/400/250" alt="第X话：大雄的平行世界">
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">科幻</span>
+                    <h3 class="card-title">大雄的平行世界</h3>
+                    <p class="card-desc">通过神奇的道具，大雄进入了两个完全不同的世界，体验了截然不同的人生。</p>
+                    <div class="card-footer">
+                        <span>更新至第X话</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Fun Facts -->
+    <section id="facts" class="fun-facts">
+        <div class="facts-container">
+            <h2>关于“蓝胖”的冷知识</h2>
+            <div class="fact-grid">
+                <div class="fact-item">
+                    <h3>434</h3>
+                    <p>集数</p>
+                </div>
+                <div class="fact-item">
+                    <h3>22世纪</h3>
+                    <p>未来时间</p>
+                </div>
+                <div class="fact-item">
+                    <h3>2万日元</h3>
+                    <p>制造费用</p>
+                </div>
+                <div class="fact-item">
+                    <h3>1293种</h3>
+                    <p>道具数量</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于蓝胖记忆</h4>
+                <p class="footer-desc">
+                    这是一个致力于记录哆啦A梦（蓝胖）相关资讯、剧情回顾及道具科普的非官方粉丝站点。我们致力于还原最纯粹的童年回忆，分享快乐与感动。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#home">回到首页</a></li>
+                    <li><a href="#memory">经典回顾</a></li>
+                    <li><a href="#props">道具图鉴</a></li>
+                    <li><a href="#facts">动漫百科</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>友情链接</h4>
+                <ul>
+                    <li><a href="#">藤子·F·不二雄博物馆</a></li>
+                    <li><a href="#">哆啦A梦中文版官网</a></li>
+                    <li><a href="#">大雄的博客</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系与支持</h4>
+                <ul>
+                    <li><a href="#">意见反馈</a></li>
+                    <li><a href="#">投稿指南</a></li>
+                    <li><a href="#">免责声明</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 蓝胖记忆站. All Rights Reserved. 本站内容仅供学习交流，非官方站点。</p>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的移动端菜单切换逻辑
+        function toggleMenu() {
+            const nav = document.getElementById('nav-menu');
+            nav.classList.toggle('active');
+        }
+
+        // 点击链接后自动关闭移动端菜单
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                const nav = document.getElementById('nav-menu');
+                if (nav.classList.contains('active')) {
+                    nav.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
